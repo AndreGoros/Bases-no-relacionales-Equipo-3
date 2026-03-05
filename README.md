@@ -2,6 +2,23 @@
 ![flights_map](images/flights_map.png)
 ## Bases de Datos No Relacionales | Equipo 3
 
+## Enlaces a las APIs y documentación correspondiente al stream
+
+
+
+## Descripción del srteam
+
+
+
+## Información general
+
+
+
+## Origen y Autoría
+
+
+
+
 ### Diccionario de Datos
 El stream de OpenSky Network transmite el estado de aeronaves detectadas por la red de sensores ADS-B. Cada registro representa la información más reciente de una aeronave en un momento determinado.
 | Atributo | Definición técnica | Tipo de dato |
@@ -43,3 +60,16 @@ Entre ellas se encuentran:
 - Wind D. – dirección del viento
 - Wind (kt) – velocidad del viento
 - Estas variables permiten analizar patrones de tráfico aéreo, velocidad, altitud, trayectoria y condiciones ambientales del vuelo.
+
+## Variables Cualitativas
+
+
+
+## Texto No Estructurado
+
+
+
+## Series Temporales
+
+
+## Consideraciones Éticas
