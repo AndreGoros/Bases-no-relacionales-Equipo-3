@@ -2,12 +2,46 @@
 ![flights_map](images/flights_map.png)
 ## Bases de Datos No Relacionales | Equipo 3
 
-## Enlaces a las APIs y documentación correspondiente al stream
+## Enlaces a la API y documentación del stream
+
+Documentación y recursos oficiales:
+
+- **Documentación oficial de la REST API:**  
+  https://opensky-network.org/apidoc/rest.html
+
+- **Sitio oficial de OpenSky Network:**  
+  https://opensky-network.org
+
+- **Repositorio de documentación y ejemplos de uso:**  
+  https://github.com/openskynetwork
+
+- **Biblioteca Python para consumir la API:**  
+  https://github.com/openskynetwork/opensky-api
 
 
+---
 
-## Descripción del srteam
+## Descripción del stream de datos
 
+El stream de datos utilizado en este proyecto proviene de la **OpenSky Network**, una red global de sensores que recolecta información transmitida por aeronaves mediante tecnología **ADS-B (Automatic Dependent Surveillance–Broadcast)** y **Mode-S**. Estas señales son emitidas periódicamente por los transpondedores de los aviones y contienen información sobre su estado de vuelo.
+
+La plataforma OpenSky recopila estas señales desde miles de receptores distribuidos en todo el mundo y las pone a disposición a través de una API pública que permite consultar el estado actual de las aeronaves.
+
+Cada evento dentro del stream corresponde a un **state vector** de una aeronave en un momento determinado. Un state vector describe el estado del avión e incluye múltiples atributos, entre ellos:
+
+- Identificador único del avión (`icao24`)
+- Callsign del vuelo
+- País de origen del registro de la aeronave
+- Posición geográfica (latitud y longitud)
+- Altitud
+- Velocidad
+- Dirección o rumbo del vuelo
+- Tasa de ascenso o descenso
+- Timestamps de posición y último contacto
+
+Estos datos permiten reconstruir la dinámica del tráfico aéreo global en tiempo casi real. El propósito de este stream es facilitar el análisis del comportamiento del tráfico aéreo, el estudio de patrones de vuelo, la detección de anomalías en trayectorias y el análisis espacial y temporal de la densidad de aeronaves en diferentes regiones.
+
+En este proyecto, cada state vector se considera un **evento del stream**, lo que permite modelar el flujo de datos como una serie de observaciones temporales de aeronaves que pueden ser almacenadas y analizadas utilizando una arquitectura de bases de datos NoSQL.
 
 
 ## Información general
