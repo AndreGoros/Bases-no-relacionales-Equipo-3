@@ -44,13 +44,18 @@ Estos datos permiten reconstruir la dinámica del tráfico aéreo global en tiem
 En este proyecto, cada state vector se considera un **evento del stream**, lo que permite modelar el flujo de datos como una serie de observaciones temporales de aeronaves que pueden ser almacenadas y analizadas utilizando una arquitectura de bases de datos NoSQL.
 
 
-## Información general
+## Resumen
+El flujo de datos seleccionado para este proyecto consiste en un stream de "State Vectors" (vectores de estado) provenientes de la red global OpenSky. Cada evento capturado representa una actualización en tiempo real de la situación física de una aeronave, incluyendo su posición tridimensional, velocidad e identidad. A diferencia de un conjunto de datos estático, este stream nos permite observar la dinámica del transporte aéreo como un sistema vivo y en constante cambio.
 
+En el contexto de nuestro proyecto de Bases de Datos No Relacionales, el objetivo es utilizar este flujo masivo para diseñar una arquitectura de extremo a extremo que sea escalable. El stream de OpenSky es ideal para este propósito ya que genera más de un evento por segundo, permitiéndonos poner a prueba una capa de ingesta de alta disponibilidad y una capa de procesamiento analítico donde transformaremos estos eventos crudos en información estratégica. El enfoque del equipo será demostrar cómo estos datos, una vez ingestados y enriquecidos, pueden revelar patrones de tráfico, saturación de rutas y comportamientos operativos mediante consultas complejas.
 
 
 ## Origen y Autoría
+La información utilizada en este proyecto es recolectada, procesada y distribuida por The OpenSky Network, una organización de investigación científica sin fines de lucro con sede en Suiza. Este proyecto surgió en 2012 como una colaboración académica entre la Universidad de Kaiserslautern (Alemania), la Universidad de Oxford (Reino Unido) y armasuisse (Suiza).
 
+A diferencia de los radares comerciales cerrados, la autoría y obtención de estos datos es comunitaria y colaborativa. El pilar tecnológico de esta red es el sistema ADS-B (Automatic Dependent Surveillance-Broadcast), el cual permite que las aeronaves determinen su propia posición y velocidad mediante GPS para después transmitirla periódicamente en la frecuencia de radio de 1090 MHz.
 
+Para capturar esta información a gran escala, OpenSky opera una infraestructura masiva de receptores distribuidos por todo el mundo. Esta red se mantiene gracias al apoyo de voluntarios, socios industriales y organizaciones gubernamentales o académicas que alojan los sensores en sus propias ubicaciones. OpenSky actúa como el nodo central que cosecha estos datos vía Internet, estandariza las señales recibidas y las transforma en el formato estructurado de "State Vectors" que consumimos a través de su API para este análisis.
 
 
 ### Diccionario de Datos
