@@ -96,8 +96,13 @@ Entre ellas se encuentran:
 - Estas variables permiten analizar patrones de tráfico aéreo, velocidad, altitud, trayectoria y condiciones ambientales del vuelo.
 
 ## Variables Cualitativas
-
-
+Las variables cualitativas que corresponden a esta base de datos donde se representan grupos o identidades fijas son: 
+- icao24 - identificador único y permanente de cada transpondedor de la aeronave
+- callsign - código de identificación del vuelo (identifica la operación actual)
+- origin_country - ubicación de registro de la aeronave
+- on_ground - categoría dicotómica: true o false
+- posicion_source - origen de los datos
+- category - tipo de vehiculo según su peso
 
 ## Texto No Estructurado
 
