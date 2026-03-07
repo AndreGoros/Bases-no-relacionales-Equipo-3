@@ -105,7 +105,7 @@ Las variables cualitativas que corresponden a esta base de datos donde se repres
 - category - tipo de vehiculo según su peso
 
 ## Texto No Estructurado
-
+Los sistemas de control de tráfico aereo requieren datos altamente estructurados y ligeros para ser transmitidos por radiofrecuencia. Existe un campo llamado 'sensors' que es una lista de IDs que se refieren a la red de receptores terrestres que escuchan las transmisiones de las aeronaves, sin embargo, este no se trata de un texto libre, si no, es una lista de códigos. En general, el texto no estructurado es inexistente en la transmisión en vivo. 
 
 
 ## Series Temporales
