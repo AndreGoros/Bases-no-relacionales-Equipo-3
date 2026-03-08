@@ -1,6 +1,13 @@
 # Tráfico Aéreo en Tiempo Real con OpenSky
 ![flights_map](images/flights_map.png)
 ## Bases de Datos No Relacionales | Equipo 3
+| Nombre | Clave Única |
+| :--- | :---: |
+| Irene Escudero Cazarez | 000000000 |
+| Maria Fernanda Leon Hernandez | 000000000 |
+| Regina Maria Cortez Vera | 000000000 |
+| Ricardo André Gorostieta Jurado | 000217746 |
+| Victor Manuel Benitez Renteria | 000000000 |
 
 ## Enlaces a la API y documentación del stream
 
@@ -113,6 +120,13 @@ Las variables cualitativas que corresponden a esta base de datos donde se repres
 Los sistemas de control de tráfico aereo requieren datos altamente estructurados y ligeros para ser transmitidos por radiofrecuencia. En general, el texto no estructurado es inexistente en la transmisión de estos datos en vivo. Existe un campo llamado 'sensors' que es una lista de IDs que se refieren a la red de receptores terrestres que escuchan las transmisiones de las aeronaves que podría ser lo más parecido a el texto no estructurado, sin embargo, este no se trata de un texto libre, si no, es una lista de códigos. 
 
 ## Series Temporales
-
+La API-Rest de Open sky no cuenta con series temporales como tal. Funciona a base de snapshots, pequeñas capturas que reflejan el momento (timestamp) cuando la aeronave ha hecho contacto. Ademas de esto, la API cuenta propiamente con la opcion de filtrar mediante lapsos de tiempo, con un maximo de dos goras, donde filtra mediante los tiempos registrados en las snapshots que se empatan con el intervalo seleccionado.
 
 ## Consideraciones Éticas
+
+El procesamiento de datos de vigilancia aérea, aunque se basa en señales públicas (ADS-B), conlleva responsabilidades éticas y riesgos de sesgo que el equipo debe considerar:
+- Seguimiento de Individuos: El uso de icao24 para rastrear aeronaves privadas de forma persistente puede derivar en problemas de privacidad. Nuestro enfoque se limita al análisis de flujos agregados y patrones de tráfico, evitando el monitoreo de objetivos individuales.
+
+- La red OpenSky depende de receptores voluntarios (crowdsourcing). Esto genera un sesgo de disponibilidad: las regiones con mayor infraestructura tecnológica (Europa y Norteamérica) presentan una densidad de datos artificialmente superior a la de regiones en desarrollo. Es éticamente necesario aclarar que la ausencia de datos en ciertas zonas no implica falta de tráfico, sino falta de sensores.
+
+- Al ser una organización sin fines de lucro enfocada en la investigación, el uso ético de estos datos implica respetar los términos de servicio para fines académicos. Existe el riesgo de que análisis erróneos o interpretaciones simplistas de anomalías en el stream generen alarmas innecesarias sobre la seguridad aérea.
