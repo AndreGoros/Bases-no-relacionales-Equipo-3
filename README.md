@@ -120,7 +120,7 @@ Las variables cualitativas que corresponden a esta base de datos donde se repres
 Los sistemas de control de tráfico aereo requieren datos altamente estructurados y ligeros para ser transmitidos por radiofrecuencia. En general, el texto no estructurado es inexistente en la transmisión de estos datos en vivo. Existe un campo llamado 'sensors' que es una lista de IDs que se refieren a la red de receptores terrestres que escuchan las transmisiones de las aeronaves que podría ser lo más parecido a el texto no estructurado, sin embargo, este no se trata de un texto libre, si no, es una lista de códigos. 
 
 ## Series Temporales
-La API-Rest de Open sky no cuenta con series temporales como tal. Funciona a base de snapshots, pequeñas capturas que reflejan el momento (timestamp) cuando la aeronave ha hecho contacto. Ademas de esto, la API cuenta propiamente con la opcion de filtrar mediante lapsos de tiempo, con un maximo de dos goras, donde filtra mediante los tiempos registrados en las snapshots que se empatan con el intervalo seleccionado.
+La API-Rest de Open sky no cuenta con series temporales como tal. Funciona a base de snapshots, pequeñas capturas que reflejan el momento (timestamp) cuando la aeronave ha hecho contacto. Ademas de esto, la API cuenta propiamente con la opcion de filtrar mediante lapsos de tiempo, con un maximo de dos horas, donde filtra mediante los tiempos registrados en las snapshots que se empatan con el intervalo seleccionado.
 
 ## Consideraciones Éticas
 
