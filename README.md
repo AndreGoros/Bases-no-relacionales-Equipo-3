@@ -4,10 +4,10 @@
 | Nombre | Clave Única |
 | :--- | :---: |
 | Irene Escudero Cazarez | 000215698 |
-| Maria Fernanda Leon Hernandez | 000000000 |
+| Maria Fernanda Leon Hernandez | 000212576 |
 | Regina Maria Cortez Vera | 000206138 |
 | Ricardo André Gorostieta Jurado | 000217746 |
-| Victor Manuel Benitez Renteria | 000000000 |
+| Victor Manuel Benitez Renteria | 000207736 |
 
 ## Enlaces a la API y documentación del stream
 
